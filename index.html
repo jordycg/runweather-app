@@ -18,12 +18,11 @@
 
     <main>
       <!-- Logo -->
-      <h1>RunWeather</h1>
+      <h1 class="rw-logo">RunWeather</h1>
 
       <!-- Zipcode and Current Address -->
       <form action="#" method="post">
         <!-- Zipcode Input -->
-        <label for="zip" class="labelzip">Enter Zipcode</label>
         <input
           type="text"
           name="zip"
@@ -42,6 +41,35 @@
           placeholder="Use Current Address"
         />
       </form>
+
+      <!-- Background Overlay -->
+      <div id="overlay" class="hid"></div>
+
+      <!-- Hidden Run Tips Section -->
+      <div id="runtips" class="hid">
+        <div class="runtips-content">
+          <div class="runtips-header">
+            <h2>Run Tips</h2>
+            <button id="closeRuntips" class="close-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill="#404040"
+                  d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z"
+                />
+              </svg>
+            </button>
+          </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+            repudiandae?
+          </p>
+        </div>
+      </div>
 
       <!-- Hidden FAQ Section-->
       <div id="faqPanel" class="faq hidden">
