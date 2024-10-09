@@ -6,6 +6,7 @@
   font-family: inter;
 }
 
+/* MAIN AREA */
 main {
     background: linear-gradient(#1F90FB, #A3D5EF);
     height: 100vh;
@@ -14,17 +15,25 @@ main {
     align-items: center;
 }
 
+nav {
+    background-color: white;
+    box-shadow: 0.25rem 0.25rem 0.25rem black;
+    padding: 1rem;
+    width: 100%;
+}
+
 ul {
     display: flex;
     justify-content: space-between;
     padding: 2vh;
+
 }
 
 li {
     list-style: none;
     justify-content: center;
     font-weight: bold;
-    color: #404040
+    color: #404040;
 }
 
 h1 {
@@ -32,7 +41,9 @@ h1 {
     color: white;
     justify-content: center;
     align-items: center;
-    margin-top: 16vh;
+    margin-top: 10rem;
+    text-shadow: 0px 0px 10px hwb(0 13% 87% / 0.281);
+
 }
 
 form {
@@ -40,14 +51,16 @@ form {
     flex-direction: column;
     width: 40vw;
     align-items: center;
-    margin-top: 6vh
+    margin-top: 2rem;
 }
 
 form > p {
     color: white;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-shadow: 0px 0px 10px hwb(0 13% 87% / 0.281);
+    font-weight: light;
+    font-size: 0.8em;
 }
 
 .labelzip {
@@ -55,23 +68,85 @@ form > p {
     font-size: 0.8em;
     margin-top: 2vh;
     margin-bottom: 2vh;
+    text-shadow: 0px 0px 10px hwb(0 13% 87% / 0.281);
 }
 
 .zip {
     border-style: solid;
     border-color: #A6A6A6;
     border-width: 0.1rem;;
-    padding: 0.4rem;
+    padding: 0.6rem;
     border-radius: 0.4rem;
-
-    
+    font-weight: light;
 }
 
 .address {
-    
     border-style: solid;
     border-color: #A6A6A6;
     border-width: 0.1rem;;
-    padding: 0.4rem;
+    padding: 0.6rem;
     border-radius: 0.4rem;;
+    font-weight: light;
+}
+
+/* FAQ AREA */
+/* THIS HIDES THE PANEL
+.hidden {
+    display: none; 
+}
+
+/* FAQ MAIN */
+
+/* FAQ PANEL */
+.faq {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    overflow-y: auto; /* Allows the links to scroll */
+    z-index: 100;
+}
+
+/* FAQ HEADER */
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; 
+    background-color: rgb(255, 255, 255); 
+    z-index: 101; 
+    padding: 2rem; 
+    border-bottom: 1px solid #ccc; 
+}
+
+/* CLOSE BUTTON */
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #404040
+}
+
+
+  /* FAQ LINKS */
+  .faq-links {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .faq-links li, a {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #1C3B6B;
+    font-weight: 300;
+  }
+
+.faqlogo {
+    color:#404040
 }
