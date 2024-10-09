@@ -17,15 +17,16 @@ main {
 
 nav {
     background-color: white;
-    box-shadow: 0.25rem 0.25rem 0.25rem black;
+    box-shadow: 0rem 0.1rem 0.5rem hsla(0, 0%, 0%, 0.721);
     padding: 1rem;
     width: 100%;
+    position: sticky;
 }
 
 ul {
     display: flex;
     justify-content: space-between;
-    padding: 2vh;
+    padding: 1rem;
 
 }
 
@@ -90,10 +91,10 @@ form > p {
 }
 
 /* FAQ AREA */
-/* THIS HIDES THE PANEL
-.hidden {
+/* /* THIS HIDES THE PANEL */
+/* .hidden {
     display: none; 
-}
+} */
 
 /* FAQ MAIN */
 
@@ -118,8 +119,9 @@ form > p {
     top: 0; 
     background-color: rgb(255, 255, 255); 
     z-index: 101; 
-    padding: 2rem; 
+    padding: 2rem;
     border-bottom: 1px solid #ccc; 
+
 }
 
 /* CLOSE BUTTON */
@@ -128,7 +130,7 @@ form > p {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #404040
+    color: #404040;
 }
 
 
