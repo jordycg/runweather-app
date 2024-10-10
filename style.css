@@ -33,14 +33,14 @@ nav {
     position: sticky;
 }
 
-ul {
+nav ul {
     display: flex;
     justify-content: space-between;
     padding: var(--base-padding)
 
 }
 
-li {
+nav li {
     list-style: none;
     font-weight: bold;
     color: #404040;
@@ -89,6 +89,47 @@ input.zip, input.address {
     padding: 0.6rem;
     border-radius: 0.4rem;
     width: 100%
+}
+
+#weather-section {
+    text-align: center;
+    padding: 2rem;
+    position: static;
+    margin-top: -28rem;
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.459);
+
+}
+
+#weather-section h2, p {
+    color: white;
+    text-align: left;
+}
+
+#weather-section p {
+    font-weight: 300;
+}
+
+.weather-disp h2, p {
+    margin-bottom: 1rem;
+}
+
+.weather-disp .zip {
+    width: 50%;
+    display: block;
+}
+
+.weather-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #EAF6FF;
+    border-radius: 0.4rem;
+    border: 1px solid #A6A6A6;
+    text-align: left;
+}
+
+.weather-info ul {
+    padding: 2rem;
 }
 
 /* OVERLAY STYLING */
