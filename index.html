@@ -48,6 +48,24 @@
           <h2>72°F Sunny</h2>
           <p>Holtsville, NY</p>
           <p>Perfect running weather!</p>
+          <svg
+            class="sun-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M18 12a6 6 0 1 1-12 0a6 6 0 0 1 12 0"
+            />
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M12 1.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0V2a.75.75 0 0 1 .75-.75M4.399 4.399a.75.75 0 0 1 1.06 0l.393.392a.75.75 0 0 1-1.06 1.061l-.393-.393a.75.75 0 0 1 0-1.06m15.202 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 0 1-1.06-1.06l.393-.393a.75.75 0 0 1 1.06 0M1.25 12a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m19 0a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75m-2.102 6.148a.75.75 0 0 1 1.06 0l.393.393a.75.75 0 1 1-1.06 1.06l-.393-.393a.75.75 0 0 1 0-1.06m-12.296 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 1 1-1.06-1.06l.392-.393a.75.75 0 0 1 1.061 0M12 20.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75"
+              clip-rule="evenodd"
+            />
+          </svg>
           <input
             type="text"
             name="zip"
@@ -81,6 +99,56 @@
           </ul>
         </div>
       </div>
+
+      <section id="weather-details" class="">
+        <div class="weather-details-container">
+          <div class="weather-details-top">
+            <h3>Weather Details</h3>
+            <div class="weather-details-stats">
+              <ul>
+                <li><strong>Temp:</strong> 72º</li>
+                <li><strong>Humidity</strong>: 60%</li>
+                <li><strong>Wind</strong>: 10 mph (N)</li>
+                <li><strong>Precip</strong>: 0%</li>
+              </ul>
+              <ul>
+                <li><strong>Feels Like</strong>: 75%</li>
+                <li><strong>Dew Point</strong>: 50%</li>
+                <li><strong>Wind Gusts</strong>: 17 mph</li>
+                <li><strong>Air Pressure</strong>: 300.1 inHg</li>
+              </ul>
+            </div>
+
+            <div class="weather-details-hourly">
+              <h3>Hourly</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+              <div class="weather-details-hourly-container">
+                <div class="hour-block">
+                  <p class="time">8 AM</p>
+                  <p class="temp">72°</p>
+                  <p class="wind">Wind: 5 mph</p>
+              </div>
+              <div class="hour-block">
+                  <p class="time">9 AM</p>
+                  <p class="temp">73°</p>
+                  <p class="wind">Wind: 7 mph</p>
+              </div>
+              <div class="hour-block">
+                  <p class="time">10 AM</p>
+                  <p class="temp">78°</p>
+                  <p class="wind">Wind: 10 mph</p>
+              </div>
+              <div class="hour-block">
+                  <p class="time">11 AM</p>
+                  <p class="temp">79°</p>
+                  <p class="wind">Wind: 12 mph</p>
+              </div>
+              </div>
+
+            
+          </div>
+        </div>
+      </section>
 
       <!-- Background Overlay -->
       <div id="overlay" class="hidden"></div>
