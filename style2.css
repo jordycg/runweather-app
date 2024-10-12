@@ -1,0 +1,189 @@
+/* THIS IS THE NEW VERSION */
+
+/* RESET STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    /* border: 0.5px solid red; */
+}
+
+/* BASE VARIABLES */
+:root {
+    /* COLORS */
+    --primary-color: #1f90fb;
+    --secondary-color: #a3d5ef;
+    --dark-color: #404040;
+    --light-color: white;
+    --accent-color: #ffd000;
+    --link-color: #1C3B6B;
+    --green: #00A934;
+    --green-border: #007725;
+
+    /* SHADOWS */
+    --shadow-sm: 0rem 0.2rem 0.3rem hsla(0, 0%, 0%, 0.1);
+    --shadow-md: 0rem 0.2rem 0.3rem hsla(0, 0%, 0%, 0.2);
+    --shadow-lg: 0rem 0.3rem 0.3rem hsla(0, 0%, 0%, 0.3);
+
+    /* SPACING */
+    --base-padding: 1.5rem;
+    --base-padding-sm: 1rem;
+    --base-padding-lg: 2rem;
+    --base-margin: 1.5rem;
+    --header-padding: 2rem;
+
+    /* TYPOGRAPHY */
+    --base-font-size: 1rem;
+    --small-font-size: 0.8rem;
+    --large-font-size: 1.2rem;
+    --small-font-weight: 300;
+
+    /* BORDER */
+    --base-border-radius: 0.5rem;
+    --base-border-style: 1px solid;
+    --base-border-color: #CDCDCD;
+}
+
+/* MAIN */
+main {
+    background: linear-gradient(var(--primary-color), var(--secondary-color));
+    height: 100vh;
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+
+/* h1, ZIPCODE, AND ADDRESS INPUT STYLING */
+.home h1 {
+    color: var(--light-color);
+    padding: var(--base-padding-lg);
+}
+
+.home input {
+    padding: var(--base-padding-sm);
+    border-radius: var(--base-border-radius);
+    border: var(--base-border-style);
+    border-color: var(--base-border-color);
+    font-weight: var(--small-font-weight);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.home .use-current-address {
+    background-color: var(--green);
+    border-color: var(--green-border);
+    color: var(--light-color);
+}
+
+.home .use-current-address::placeholder {
+    color: var(--light-color);
+}
+
+.home p {
+    padding: var(--base-padding-sm);
+    color: var(--light-color);
+    font-weight: var(--small-font-weight);
+    font-size: var(--small-font-size);
+}
+
+/* NAVBAR STYLING */
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: var(--light-color);
+    padding: var(--base-padding-sm);
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+nav ul {
+    display: contents;
+    
+
+}
+
+nav li {
+    list-style: none;
+    text-align: center;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+nav li:first-child {
+    text-align: left;
+}
+
+nav li:last-child {
+    text-align: right;
+}
+
+/* HIDDEN FAQ STYLING */
+.faq {
+    background-color: var(--light-color);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    /* background-color: hsla(0, 0%, 85%, 0.751); */
+    /* border: 1px solid red; */
+}
+
+.faq-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    color: var(--dark-color);
+    padding: 0.7rem;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0; /* This ensures it sticks to the top of the screen */
+    background-color: var(--light-color); /* Ensure the background doesn't become transparent when scrolling */
+    z-index: 100;
+}
+
+.faq-top:first-child {
+    text-align: left;
+}
+
+.faq-top:last-child {
+    text-align: right;
+}
+
+.faq-links {
+    overflow-y: auto;
+}
+
+.faq-links li {
+    text-align: left;
+    font-weight: var(--small-font-weight);
+    list-style: none;
+    padding: var(--base-padding);
+    color: var(--link-color);
+    transition: 0.2s ease-in-out;
+}
+
+.faq-links li:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #404040;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+
+.hidden {
+    display: none;
+}
