@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter';
-    border: 0.5px solid red;
+    /* border: 0.5px solid red; */
 }
 
 /* BASE VARIABLES */
@@ -58,6 +58,7 @@ main {
 .home h1 {
     color: var(--light-color);
     padding: var(--base-padding-lg);
+    
 }
 
 .home input {
@@ -207,7 +208,8 @@ nav li:last-child {
     position: sticky;
     top: 0; /* This ensures it sticks to the top of the screen */
     background-color: var(--light-color); /* Ensure the background doesn't become transparent when scrolling */
-    z-index: 100;
+    z-index: 105;
+
 }
 
 .settings-top:first-child {
@@ -223,34 +225,76 @@ nav li:last-child {
     grid-template-columns: 1fr; 
     gap: 1.5rem; 
     padding: var(--base-padding-sm);
+    overflow-y: auto;
+    box-shadow: var(--shadow-sm)
 }
 
 .settings-btns-container h3 {
     text-align: left;
-    color: var(--dark-color)
+    color: var(--dark-color);
 }
 
 .settings-btns-container button {
-    padding:var(--base-padding-sm)
+    padding:var(--base-padding-sm);
+    border-radius:var(--base-border-radius);
+    text-align: center;
+    width: 100%;
+    margin-top: var(--base-margin);
+    font-weight: var(--small-font-weight);
+    border-style: var(--base-border-style);
+    border-color: var(--base-border-color);
+    background-color: #e8e8e8;
+    box-shadow: var(--shadow-md);
 }
 
-.settings-temp {
+.settings-temp .on, .settings-wind .on, .settings-theme .on {
+    background-color: var(--green);
+    color:var(--light-color);
+    border: var(--base-border-style);
+    border-color: var(--green-border);
+}
+
+.settings-save {
+    width: 100%;
+}
+
+.settings-save button {
+    background-color: black;
+    color: white;
+    border-radius: var(--base-border-radius);
+    border-style: var(--base-border-style);
+    font-weight: var(--small-font-weight);
+    /* margin-top: 0; LEAVING THIS HERE FOR NOW */
+}
+
+.settings-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: var(--base-padding-sm);
+
+}
+
+.settings-footer ul {
+    display: contents;
+}
+
+.settings-footer li {
+    list-style: none;
+    font-size: var(--small-font-size);
+    font-weight: var(--small-font-weight);
+    color: var(--link-color);
+}
+
+.settings-footer li:first-child {
+    list-style: none;
     text-align: left;
 }
 
-.settings-wind {
-    text-align: left;
+.settings-footer li:last-child {
+    list-style: none;
+    text-align: right;
 }
 
-.settings-theme {
-    text-align: left;
-}
-
-.
-
-
-
-
-/* .hidden {
+.hidden {
     display: none;
 }
