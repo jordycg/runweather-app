@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter';
-    /* border: 0.5px solid red; */
+    border: 0.5px solid red;
 }
 
 /* BASE VARIABLES */
@@ -293,6 +293,98 @@ nav li:last-child {
 .settings-footer li:last-child {
     list-style: none;
     text-align: right;
+}
+
+/* CONTACT STYLING */
+.contact {
+    background-color: var(--light-color);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    /* background-color: hsla(0, 0%, 85%, 0.751); */
+    /* border: 1px solid red; */
+}
+
+.contact-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    color: var(--dark-color);
+    padding: 0.9rem;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0; /* This ensures it sticks to the top of the screen */
+    background-color: var(--light-color); /* Ensure the background doesn't become transparent when scrolling */
+    z-index: 105;
+}
+
+.contact-top:first-child {
+    text-align: left;
+}
+
+.settings-top:last-child {
+    text-align: right;
+}
+
+.contact-input-container {
+    padding: var(--base-padding-sm);
+    overflow-y: auto;
+    box-shadow: var(--shadow-sm)
+}
+
+.contact-input-container h4 {
+    text-align: left;
+    color: var(--dark-color);
+}
+
+.contact-input-container input {
+    padding: var(--base-padding-sm);
+    border-radius: var(--base-border-radius);
+    border-style: var(--base-border-style);
+    border-color: var(--base-border-color);
+    background-color: #f2f2f2;
+    width: 100%;
+    margin-top: var(--base-margin);
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+
+}
+
+.contact-input-container .message {
+    width: 100%;
+    height: 25vh;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+
+}
+
+.contact-input-container .message::placeholder {
+    text-align: left;
+}
+
+.contact-input-container .submit-button {
+    padding-top: var(--base-padding-lg);
+    padding-bottom: var(--base-padding-lg);
+
+}
+
+.contact-input-container .submit-button button {
+    padding: var(--base-padding-sm);
+    border-radius: var(--base-border-radius);
+    text-align: center;
+    width: 100%;
+    font-weight: var(--small-font-weight);
+    border-style: var(--base-border-style);
+    border-color: var(--green-border);
+    background-color: var(--green);
+    color: white;
+    box-shadow: var(--shadow-md);
 }
 
 .hidden {
