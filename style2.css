@@ -21,6 +21,8 @@
     --link-color: #1C3B6B;
     --green: #00A934;
     --green-border: #007725;
+    --moderate-color: #F3B06D;
+    --warning-color: #E9776F;
 
     /* SHADOWS */
     --shadow-sm: 0rem 0.2rem 0.3rem hsla(0, 0%, 0%, 0.1);
@@ -558,6 +560,7 @@ nav li:last-child {
     display: grid;
     padding: var(--base-padding-lg);
     z-index: 1000;
+    margin-top: 7rem;
 }
 
 .weather-details-container h3 {
@@ -573,6 +576,8 @@ nav li:last-child {
     align-self: center;
     margin-left: 1rem;
 }
+
+/* FIXME - MAKE SURE THAT IT IS VERTICALLY ALIGNED WITH THE H3 */
 
 .weather-details-container .collapse {
     margin-left: auto;
@@ -603,6 +608,8 @@ nav li:last-child {
     color: var(--dark-color);
     position: relative;
     box-shadow: var(--shadow-sm);
+    margin-bottom: var(--base-padding-sm);
+
 }
 
 .hourly-item {
@@ -618,6 +625,116 @@ nav li:last-child {
     width: 2px;
     height: 100%;
     background-color: red;
+}
+
+.weather-details-daily-carousel {
+    background-color: var(--gray-color);
+    border: 1px solid var(--base-border-color);
+    border-radius: var(--base-border-radius);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow-x: auto;
+    column-gap: 1rem;
+    padding: var(--base-padding);
+    margin-bottom: var(--base-padding-sm);
+    color: var(--dark-color);
+    position: relative;
+    box-shadow: var(--shadow-sm);
+}
+
+.daily-button-switch {
+    margin: auto;
+}
+
+.daily-button-switch button:first-child {
+    background-color: var(--green);
+    color: var(--light-color);
+    padding: var(--base-padding-sm);
+    border-radius: var(--base-border-radius);
+    border: var(--base-border-style);
+    border-color: var(--green-border);
+    box-shadow: var(--shadow-sm);
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.daily-button-switch button:last-child {
+    background-color: var(--gray-color);
+    color: var(--dark-color);
+    padding: var(--base-padding-sm);
+    border-radius: var(--base-border-radius);
+    border: 1px solid var(--base-border-color);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.daily-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.reset-button {
+    padding: var(--base-padding-sm);
+    border-radius: var(--base-border-radius);
+    text-align: center;
+    width: 100%;
+    font-weight: var(--small-font-weight);
+    border-style: var(--base-border-style);
+    border-color: var(--green-border);
+    background-color: black;
+    color: white;
+    box-shadow: var(--shadow-md);
+    font-weight: bold;
+    margin-top: var(--base-margin);
+    margin-bottom: var(--base-margin);
+}
+
+.weather-alerts-container {
+    background-color: var(--gray-color);
+    border: 1px solid var(--base-border-color);
+    border-radius: var(--base-border-radius);
+    overflow-x: auto;
+    column-gap: 1rem;
+    padding: var(--base-padding);
+    color: var(--dark-color);
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--base-padding);
+}
+
+/* POLLEN COUNT */
+.pollen-count-container {
+    text-align: left;
+}
+
+.pollen-count-container p {
+    margin-bottom: var(--base-padding-sm);
+    padding: var(--base-padding-sm);
+    color: white;
+}
+
+.tree-pollen {
+    background-color: var(--green);
+    border-radius: var(--base-border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.grass-pollen {
+    background-color: var(--green);
+    border-radius: var(--base-border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.weed-pollen {
+    border-radius: var(--base-border-radius);
+    box-shadow: var(--shadow-sm);
+    background-color: #F3B06D;
 }
 
 .hidden {
