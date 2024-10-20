@@ -716,7 +716,7 @@ nav li:last-child {
 .pollen-count-container p {
     margin-bottom: var(--base-padding-sm);
     padding: var(--base-padding-sm);
-    color: white;
+    color: var(--dark-color);
 }
 
 .tree-pollen {
@@ -735,6 +735,25 @@ nav li:last-child {
     border-radius: var(--base-border-radius);
     box-shadow: var(--shadow-sm);
     background-color: #F3B06D;
+}
+
+.setrise-container {
+    border-radius: var(--base-border-radius);
+    overflow-x: auto;
+    column-gap: 1rem;
+    color: var(--dark-color);
+    position: relative;
+    margin-bottom: var(--base-padding);
+}
+
+.setrise-container p {
+    padding: var(--base-padding-sm)
+}
+
+.set-rise-gradient {
+    background: linear-gradient(to right, #FF512F, #F09819, #FF512F);
+    height: 1rem;
+    position: relative;
 }
 
 .hidden {
