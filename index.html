@@ -1,12 +1,10 @@
-<!-- THIS IS THE NEW VERSION -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- NAVIGATION -->
@@ -239,12 +237,15 @@
 
       <!-- WEATHER MAIN CONTAINER -->
       <section class="weather-main-container">
+        <!-- WEATHER MAIN TOP - DISPLAYS CURRENT WEATHER DETAILS -->
         <div class="weather-main-top">
           <h1>72ºF</h1>
           <h2>Sunny</h2>
           <p>Perfect Running Weather!</p>
           <p>New York, NY</p>
         </div>
+
+        <!-- WEATHER MAIN MIDDLE - USER INPUT -->
         <div class="weather-main-middle">
           <input
             type="text"
@@ -268,6 +269,7 @@
             />
           </svg>
         </div>
+        <!-- WEATHER MAIN BOTTOM - DISPLAYS WHAT TO WEAR -->
         <div class="weather-main-bottom">
           <h3>What to Wear:</h3>
           <ul>
@@ -299,6 +301,15 @@
 
       <!-- WEATHER DETAILS CONTAINER -->
       <section class="weather-details-container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="2em"
+          height="2em"
+          viewBox="0 0 24 24"
+          class="details-collapse"
+        >
+          <path fill="#3A3A3A" d="m12 15l-5-5h10z" />
+        </svg>
         <div class="weather-details-details">
           <h3>Weather Details</h3>
           <ul>
@@ -380,6 +391,7 @@
               <button>Day</button>
               <button>Night</button>
             </div>
+            <button class="reset-button-1024 hidden">Reset</button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5em"
@@ -476,9 +488,55 @@
             </svg>
           </h3>
           <div class="pollen-count-container">
-            <p class="tree-pollen"><strong>Tree Pollen:</strong> Low</p>
-            <p class="grass-pollen"><strong>Grass Pollen:</strong> Low</p>
-            <p class="weed-pollen"><strong>Weed Pollen:</strong> Moderate</p>
+            <p class="tree-pollen">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g fill="none">
+                  <path
+                    d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"
+                  />
+                  <path
+                    fill="#3A3A3A"
+                    d="M12.707 2.293a1 1 0 0 0-1.414 0l-4 4a1 1 0 0 0-.175 1.178c.247.463.633.775 1.01.987l-2.835 2.835a1 1 0 0 0 0 1.414c.478.478 1.082.77 1.634.952l-2.634 2.634a1 1 0 0 0 .396 1.657c.69.227 1.403.388 2.115.53c.78.157 1.746.312 2.845.412l-.598 1.792A1 1 0 0 0 10 22h4a1 1 0 0 0 .949-1.316l-.598-1.792c1.1-.1 2.066-.255 2.845-.411c.712-.143 1.43-.304 2.12-.532a1 1 0 0 0 .391-1.656l-2.634-2.634c.552-.181 1.156-.474 1.634-.952a1 1 0 0 0 0-1.414l-2.835-2.835c.377-.212.763-.524 1.01-.987a1 1 0 0 0-.175-1.178z"
+                  />
+                </g></svg
+              ><strong>Tree Pollen: </strong> Low
+            </p>
+            <p class="grass-pollen">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                    d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"
+                  />
+                  <path
+                    fill="#3A3A3A"
+                    d="M6.356 3.235a1 1 0 0 1 1.168-.087c3.456 2.127 5.35 4.818 6.36 7.78c.25.733.445 1.48.596 2.236c1.029-1.73 2.673-3.102 5.149-4.092a1 1 0 0 1 1.329 1.215l-.181.604C19.417 15.419 19 16.806 19 20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1c0-3.864-.472-6.255-1.949-10.684a1 1 0 0 1 1.32-1.244c1.395.557 2.455 1.301 3.255 2.18a24 24 0 0 0-1.554-5.88a1 1 0 0 1 .284-1.137"
+                  />
+                </g></svg
+              ><strong>Grass Pollen: </strong> Low
+            </p>
+            <p class="weed-pollen">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#3A3A3A"
+                  d="M12 2a3 3 0 0 0-2.951 3.54a2.5 2.5 0 0 0-1.334 4.21A2.5 2.5 0 0 0 9.5 14h1.75v4.69l-3.47-3.47a.75.75 0 0 0-1.06 1.06l4.53 4.53v1.44a.75.75 0 0 0 1.5 0v-1.44l4.53-4.53a.75.75 0 1 0-1.06-1.06l-3.47 3.47V14h1.75a2.5 2.5 0 0 0 1.785-4.25a2.5 2.5 0 0 0-1.334-4.21Q15 5.278 15 5a3 3 0 0 0-3-3"
+                /></svg
+              ><strong>Weed Pollen: </strong>Moderate
+            </p>
           </div>
         </div>
 
@@ -510,7 +568,7 @@
           <div class="setrise-container">
             <p><strong>Sunrise:</strong> 6:10 AM</p>
             <div class="set-rise-gradient">
-              <div class="current-time-line"></div>
+              <div class="setrise-line"></div>
             </div>
             <p><strong>Sunset:</strong> 7:10 PM</p>
           </div>
