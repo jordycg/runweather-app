@@ -54,12 +54,24 @@
 
 
 /* MAIN */
+
+body {
+    transform: scale(0.75); 
+    transform-origin: 0 0; 
+    width: 133.33vw;
+    height: 133.33vw;
+}
+
 main {
-    background: linear-gradient(var(--primary-color), var(--secondary-color));
     height: 100vh;
     display: grid;
     text-align: center;
     align-items: center;
+}
+
+.background-gradient {
+    background: linear-gradient(var(--primary-color), var(--secondary-color));
+    height: 100%;
 }
 
 /* h1, ZIPCODE, AND ADDRESS INPUT STYLING */
@@ -657,9 +669,10 @@ nav li:last-child {
 }
 
 .daily-button-switch button {
-    line-height: 0.1rem;
+    height: 3rem;
     width: 6rem;
 }
+
 
 .daily-button-switch button:first-child {
     background-color: var(--green);
@@ -795,8 +808,8 @@ nav li:last-child {
     display: none;
 }
 
-/* 1024 PX */
-@media screen and (min-width: 1024px) {
+/* 768 PX */
+@media screen and (min-width: 768px) {
 
     body {
         transform: scale(0.75); 
@@ -808,8 +821,14 @@ nav li:last-child {
     .main {
         transform-origin: 0 0;
         width: 100vw;
+
     }
 
+    .background-gradient {
+        background: linear-gradient(var(--primary-color), var(--secondary-color));
+        height: 100%;
+
+    }
 
     .weather-main-container {
         margin-left: 0;
@@ -831,22 +850,14 @@ nav li:last-child {
         top: 18rem;
     }
 
-    .weather-details-container h3 {
-        color: var(--light-color);
-    }
-
-    .weather-details-container li {
-        color: var(--light-color);
-    }
-
     .weather-details-container {
         background-color: var(--light-color);
         border-radius: var(--base-border-radius);
         display: grid;
         padding: var(--base-padding-lg);
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-left: 35%;
-        background:hsla(0, 0%, 85%, 0.2);
+        background: hsla(0, 0%, 85%, 0.2);
         box-shadow: var(--shadow-md);
         grid-template-areas: 
             "weather-details weather-alerts pollen-count"
@@ -856,10 +867,20 @@ nav li:last-child {
         row-gap: 0rem;
         column-gap: 1rem;
         padding: var(--base-padding);
+        width: 64%;
     }
 
-    .collapse {
-        display: none;
+    .weather-details-container h3, .weather-details-container li {
+        color: var(--light-color);
+        text-shadow: var(--shadow-sm);
+    }
+
+    .weather-details-container h3 {
+        padding-top: 0;
+    }
+
+    .weather-details-daily {
+        padding-bottom: var(--base-padding-sm);
     }
 
     .weather-details-daily h3 {
@@ -870,37 +891,54 @@ nav li:last-child {
         grid-column: 1 / 2;
         grid-row: 1;
     }
-    
+
     .weather-alerts {
         grid-column: 2 / 3;
         grid-row: 1;
     }
-    
+
     .weather-details-pollen-count {
         grid-column: 3 / 4;
         grid-row: 1;
     }
-    
+
     .weather-details-hourly {
         grid-column: 1 / 4;
         grid-row: 2;
     }
-    
+
     .weather-details-daily {
         grid-column: 1 / 4;
         grid-row: 3;
     }
-    
+
     .weather-details-set-rise {
         grid-column: 1 / 4;
         grid-row: 4;
     }
 
-    .details-collapse {
+    .collapse, .details-collapse, .reset-button {
         display: none;
     }
 
-    .daily-button-switch{
+    .reset-button-1024 {
+        display: block;
+        padding: var(--base-padding-sm);
+        border-radius: var(--base-border-radius);
+        text-align: center;
+        font-weight: var(--small-font-weight);
+        border-style: var(--base-border-style);
+        border-color: var(--green-border);
+        background-color: black;
+        color: white;
+        box-shadow: var(--shadow-md);
+        font-weight: bold;
+        margin-top: var(--base-margin);
+        margin-bottom: var(--base-margin);
+        width: 40%;
+    }
+
+    .daily-button-switch {
         height: auto;
     }
 
@@ -909,47 +947,62 @@ nav li:last-child {
         height: 3rem;
     }
 
-   .weather-details-hourly-carousel {
-    margin-bottom: 0;
-   }
+    .weather-details-hourly-carousel, .pollen-count-container {
+        margin-bottom: 0;
+    }
 
-   .pollen-count-container {
-    margin-bottom: 0;
-   }
+    .pollen-count-container .weed-pollen p {
+        margin-bottom: 0;
+    }
 
-   .reset-button {
-    display: none;
-   }
+    .setrise-container {
+        background-color: var(--gray-color);
+        box-shadow: var(--shadow-sm);
+    }
+    .faq {
+        width: 30%;
+        z-index: 2000;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        position: absolute;
+        border-radius: 0 0 var(--base-border-radius) var(--base-border-radius);
+        border: 1px solid var(--base-border-color);
+        top: 3.2rem;
+    }
 
-   .reset-button-1024 {
-    display: block;
-    padding: var(--base-padding-sm);
-    border-radius: var(--base-border-radius);
-    text-align: center;
-    font-weight: var(--small-font-weight);
-    border-style: var(--base-border-style);
-    border-color: var(--green-border);
-    background-color: black;
-    color: white;
-    box-shadow: var(--shadow-md);
-    font-weight: bold;
-    margin-top: var(--base-margin);
-    margin-bottom: var(--base-margin);
-    width: 40%;
-   }
+    .settings {
+        width: 30%;
+        z-index: 2000;
+        margin-left: auto;
+        left: 0;
+        right: 0;
+        position: absolute;
+        border-radius: 0 0 var(--base-border-radius) var(--base-border-radius);
+        border: 1px solid var(--base-border-color);
+        top: 3.2rem;
+        grid: none;
+    }
 
-   .weather-details-container h3 {
-    padding-top: 0;
-   }
+    .contact {
+        width: 30%;
+        z-index: 2000;
+        margin-left: auto;
+        left: 0;
+        right: 0;
+        position: absolute;
+        border-radius: 0 0 var(--base-border-radius) var(--base-border-radius);
+        border: 1px solid var(--base-border-color);
+        top: 3.2rem;
+        grid: none;
+    }
 
-   .pollen-count-container {
-    margin-bottom: 0;
-    text-align: left;
-   }
+    .weather-details-container path:not(.pollen-count-container path) {
+        fill: white;
+    }
 
-   .pollen-count-container .weed-pollen p {
-    margin-bottom: 0;
-   }
-    
+
 }
+
 
